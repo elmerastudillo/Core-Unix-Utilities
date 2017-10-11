@@ -33,10 +33,12 @@ Challenges within each section are meant to be solved in order.
     - `pwd`
 1.  List the files in your working directory
     - `ls`
+    - `ls -a `
 1.  List the files with a particular extension, like `.txt`
     - `ls *.txt`
 1.  List the files in a subdirectory, like `project`
     - `ls -l $(find /project -type f )`
+    - `ls directory`
 1.  Navigate to a subdirectory, like `project`
     - `cd /project`
 1.  Navigate to the parent directory of your working directory
@@ -45,11 +47,14 @@ Challenges within each section are meant to be solved in order.
     - `cd path/to/project`
 1.  Navigate to your home directory
     - `cd /home`
+    - `cd ~`
 1.  Navigate back to the previous directory
-    - `cd ..`
+    - `cd -`
+    - `cd ../../../`
+    control a and control e to jump from begging and end of line
+    control k and y cut and yank
 
 ### Variables
-
 1.  Print a sentence, like `Hello world`
     - `echo hi`
 1.  Print a variable value, like `$USER` or `$PATH`
@@ -63,36 +68,58 @@ Challenges within each section are meant to be solved in order.
 1.  Print all environment variables (names and values)
     - `printenv`
 1.  Make an alias named `hello` that prints `Hello world`
-    - `alias hello='echo "hello world"'`
+    - `alias hello='echo hello world'`
 
 1.  Make an alias named `gocode` that navigates to your code directory
-    - `alias hello='echo "Hello world"'`
-1.  Print all aliases (names and values)
     - `alias hello='echo cd /Users/elmerastudillo/desktop/Core-Unix-Utilities'`
+1.  Print all aliases (names and values)
+    - `alias`
 ### Getting Help
 
 1.  Print what options a command accepts, like `bash` or `python`
+- `--help`
 1.  Read the manual for a command, like `echo` or `ls`
+- `man`
 1.  Print the file path to a command, like `bash` or `python`
+- `which`
 
 ### Files
 
 1.  Navigate to the directory `Animals`
+
 1.  Print the contents of the file `Cats.txt`
+- `cat Cats.txt`
 1.  Print the contents of both files `Cats.txt` and `Dogs.txt`
+- `more Cats.txt`
 1.  Count the words in the file `Cats.txt`
+- `wc -w cats.txt`
+- `wc -l cats.txt`
+- `wc -c cats.txt`
 1.  Count the words in all files with the extension `.txt`
+- `wc *.txt`
 1.  Copy the file `Dogs.txt` to a new file `BabyDogs.txt`
+- `cp Dogs.txt BabyDogs.txt`
 1.  Rename the file `BabyDogs.txt` to `Puppies.txt`
+- `mv`
 1.  Make a new directory named `Shelter` inside `Animals`
 1.  Move the file `Puppies.txt` into the directory `Shelter`
+- `mv Puppies.txt Shelter/`
 1.  Copy the file `Cats.txt` to `Kittens.txt` inside `Shelter`
+- `cat Cats.txt >> Folder`
 1.  List the files within the directory `Shelter`
+-  `ls directory/`
 1.  Count the words in all `.txt` files inside `Shelter`
+- `wc Shelter/*.txt`
 1.  Try to remove the directory `Shelter` (this should fail)
+- `mdir`
 1.  Remove all `.txt` files inside `Shelter`
+- `rm Shelter/*.txt`
 1.  Remove the directory `Shelter` (this should succeed)
+- `rmdir Shelter/`
 1.  Now cry because you just deleted those poor tiny animals
+- `rm -r /`
+- `rm -r ~`
+
 
 ### Permissions
 
